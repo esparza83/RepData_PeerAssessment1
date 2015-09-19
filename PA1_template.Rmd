@@ -47,7 +47,7 @@ hist(steps_date$steps, col=1)
 x <- data_activity %>% group_by(interval) %>% summarise_each(funs(mean),steps) 
 plot(x$interval, x$steps, type='l', col=1)
 ``` 
-![alt text](https://raw.githubusercontent.com/esparza83/RepData_PeerAssessment1/master/figure/unnamed-chunk-8-1.png"") 
+![plot of chunk unnamed-chunk-8](./figure/unnamed-chunk-8-1.png)  
 2.  Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 ```{r, echo=TRUE}
 x[x$steps == max(x$steps),]
@@ -84,7 +84,7 @@ steps_date_new <- newdata %>% group_by(date) %>% summarise_each(funs(sum),steps)
 hist(steps_date_new$steps, col=1)
 newdata %>% group_by(date) %>% summarise_each(funs(mean,median),steps)  
 ``` 
-![alt text](https://raw.githubusercontent.com/esparza83/RepData_PeerAssessment1/master/figure/unnamed-chunk-13-1.png"") 
+![plot of chunk unnamed-chunk-13](./figure/unnamed-chunk-13-1.png) 
 The impact of imputing missing data impacted on the mean/median of each interval  
 
 
@@ -102,4 +102,4 @@ qplot(x$interval, x$steps, data=x, geom=c("line"), xlab="Interval",
       ylab="Number of steps", main="") + facet_wrap(~ day, ncol=1)
 
 ``` 
-![alt text](https://raw.githubusercontent.com/esparza83/RepData_PeerAssessment1/master/figure/unnamed-chunk-15-1.png"") 
+![plot of chunk unnamed-chunk-15](./figure/unnamed-chunk-15-1.png)  
