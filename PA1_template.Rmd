@@ -33,7 +33,7 @@ steps_date <- data_activity %>% group_by(date) %>% summarise_each(funs(sum),step
 ```{r, echo=TRUE}
 hist(steps_date$steps, col=1)
 ```  
-![plot of chunk unnamed-chunk-6](./RepData_PeerAssessment1/master/figure/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-6](./RepData_PeerAssessment1/tree/master/figure/unnamed-chunk-6-1.png) 
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 ```{r, echo=TRUE}
